@@ -6,3 +6,67 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* setting background color */
+body {
+    background: chocolate;
+}
+/* Setting postion of start button */
+.start_btn,
+.rule_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start_btn button {
+    font-size: 25px;
+    font-weight: 500;
+    color: chocolate;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background:cornsilk;
+    cursor: pointer;
+}
+
+.rule_box {
+    width: 500px;
+    background: cornsilk;
+    border-radius: 5px;
+}
+
+.rule_box .rule_title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    padding: 0px 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.rule_box .rule_list {
+    padding: 15px 35px;
+}
+
+.rule_box .rule_list .info {
+    margin: 5px 0px;
+    font-size: 16px;
+}
+
+.rule_box .rule_list .info span {
+    font-weight: 600;
+    color: chocolate;
+}
+
+.info_box .buttons {
+    height: 60px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    padding: 0px 35px;
+    border-top: 1px solid grey;
+}
