@@ -13,11 +13,14 @@ body {
 /* Setting postion of start button */
 .start_btn,
 .rule_box,
-.quiz_box{
+.quiz_box,
+.result_box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0px black,
+                        0px 6px 20px 0px black;
 }
 
 .start_btn button {
@@ -33,10 +36,12 @@ body {
 }
 
 .rule_box {
-    display: none;
     width: 540px;
     background: cornsilk;
     border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .rule_box .rule_title {
@@ -107,10 +112,12 @@ body {
 }
 
 .quiz_box {
-    display: inline;
     width: 550px;
     background: cornsilk;
     border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .quiz_box header {
@@ -266,4 +273,61 @@ footer .next_btn {
 footer .next_btn:hover {
     background: blue;
     color: cornsilk;
+}
+
+.result_box {
+    background: cornsilk;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.result_box .icon {
+    font-size: 100px;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.result_box .complete_text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result_box .score_text span{
+    display: flex;
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.score_text span p {
+    font-weight: 600;
+    padding: 0px 4px;
+}
+
+.result_box .buttons {
+    display: flex;
+    margin: 20px 0px;
+}
+
+.result_box .buttons button {
+    margin: 0px 10px;
+    height: 45px;
+    padding: 0px 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid blue;
+    cursor:pointer;
+    transition: all 0.3s ease;
 }
