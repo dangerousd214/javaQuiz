@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Script Quiz</title>
     <link href="style.css" rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
@@ -34,34 +35,55 @@
 
     <!-- Quiz box and timer -->
    <div class="quiz_box">
-       <header>
+       <header>JavaScript Quiz
            <div class="timer">
                <div class="time_text">Time Left</div>
                <div class="timer_sec">15</div>
            </div>
        </header>
-
+       <!-- question/answer box -->
        <section>
            <div class="que_text">
                <span>Question here</span>
                <div class="option">
                    <span>Answer</span>
-                   <div class="icon"><i class="fas fa-check"></i></div>
+                   <div class="icon tick"><i class="fas fa-check"></i></div>
                </div>
                <div class="option">
                 <span>Answer</span>
-                <div class="icon"><i class="fas fa-check"></i></div>
+                <div class="icon cross"><i class="fas fa-cross"></i></div>
             </div>
             <div class="option">
                 <span>Answer</span>
-                <div class="icon"><i class="fas fa-check"></i></div>
             </div>
             <div class="option">
-                <span>Answer</span>
-                <div class="icon"><i class="fas fa-check"></i></div>
+                <span>Answer</span> 
             </div>
            </div>
        </section>
+
+       <!-- quiz box footer -->
+       <footer>
+           <div class="total_que">
+               <span><p>2</p>of<p>5</p>Questions</span>
+           </div>
+           <button class="next_btn">Next Question</button>
+       </footer>
+   </div>
+
+   <!-- Result box -->
+   <div class="result_box">
+       <div class="icon">
+           <i class="fas fa-crown"></i>
+       </div>
+       <div class="complete_text">You've finished the Quiz. Congrats!</div>
+       <div class="score_text">
+           <span>Sorry you only got <p>2</p> out of <p>5</p></span>
+       </div>
+       <div class="buttons">
+           <button class="restart">Try Again?</button>
+           <button class="quit">Quit</button>
+       </div>
    </div>
 
 </body>
