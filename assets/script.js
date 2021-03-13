@@ -1,22 +1,31 @@
-// calling all required elements
-const start_btn = document.querySelector(".start_btn button");
-const rule_box = document.querySelector(".rule_box");
-const exit_btn = rule_box.querySelector(".buttons .quit");
-const continue_btn = rule_box.querySelector(".buttons .restart");
-const quiz_box = document.querySelector(".quiz_box");
+const start = document.querySelector(".start button");
+const container = document.querySelector(".container");
+const clock = document.querySelector(".clock");
+const exit = document.querySelector(" .exit")
 
-// When start button clicked show rules
-start_btn.onclick = ()=>{
-    rule_box.classList.add("activeInfo"); 
+start.onclick = ()=>{
+    container.classList.add("active");
+    clock.classList.add("active"); 
+    countdown;
 }
 
-// When quit button clicked hide rules
-exit_btn.onclick = ()=>{
-    rule_box.classList.remove("activeInfo");
+exit.onclick = function () {
+    container.classList.remove("active");
+    clock.classList.remove("active");
 }
+ function countdown() {
+     var timeLeft = 15;
 
-// if continue button clicked hide rules and display quiz
-continue_btn.onclick = ()=>{
-    rule_box.classList.remove("activeInfo");
-    quiz_box.classList.add("activeQuiz");
-}
+     var clock = setInterval(function() {
+         if(timeLeft <= 0) {
+             clearInterval(clock);
+             document.getElementsByClassName('clock').innerHTML = timeLeft;
+         } else {
+             document.getElementsByClassName('clock').innerHTML = timeLeft;
+         }
+         timeLeft -= 1;
+    }, 1000);
+ }
+
+ 
+
